@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_navigation"
+    app:startDestination="@+id/fabCreateProduct"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/fabCreateProduct"
+        android:name="com.encora.encoratestapplication.ui.fragment.SongListFragment"
+        android:label="Song List"
+        tools:layout="@layout/fragment_song_list">
+
+        <action
+            android:id="@+id/action_SongListFragment_to_SongDetailsFragment"
+            app:destination="@id/songDetailsFragment" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/songDetailsFragment"
+        android:name="com.encora.encoratestapplication.ui.fragment.SongDetailsFragment"
+        android:label="Song Details"
+        tools:layout="@layout/fragment_song_details">
+
+
+    </fragment>
+
+</navigation>

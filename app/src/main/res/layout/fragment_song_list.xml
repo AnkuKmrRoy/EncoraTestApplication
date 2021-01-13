@@ -5,16 +5,21 @@
 
     <data>
         <variable
-            name="encoraAssignmentViewModel"
+            name="songListViewModel"
             type="com.encora.encoratestapplication.view_model.EncoraAssignmentViewModel" />
     </data>
 
-<androidx.constraintlayout.widget.ConstraintLayout
+<FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.MainActivity">
+    android:background="@android:color/white"
+    tools:context=".ui.fragment.ImageListFragment">
 
-    <include layout="@layout/content_main" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSongList"
+        android:padding="@dimen/_5ssp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
 </layout>
